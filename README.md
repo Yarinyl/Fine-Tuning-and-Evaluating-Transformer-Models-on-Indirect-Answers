@@ -1,4 +1,4 @@
-# Fine-Tuning and Evaluating Transformer Models on Classification Tasks
+# Fine-Tuning and Evaluating Transformer Models on Indirect Answers and Sentiment Analysis Tasks
 
 This repository contains a complete pipeline for training and evaluating transformer-based models (e.g., BERT, RoBERTa, and LLaMA 3) on several text classification tasks using Hugging Face and Unsloth.
 
