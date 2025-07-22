@@ -7,8 +7,8 @@ This repository contains a complete pipeline for training and evaluating transfo
 ```
 ├── config_LLM.py        # Configuration and dataset loading for LLaMA models
 ├── config_SLM.py        # Configuration and dataset loading for BERT/RoBERTa models
-├── train_llm.py         # Training and evaluation logic for LLaMA models (Unsloth)
-├── train_slm.py         # Training and evaluation logic for BERT/RoBERTa models
+├── train_test_LLM.py         # Training and evaluation logic for LLaMA models (Unsloth)
+├── train_test_SLM.py         # Training and evaluation logic for BERT/RoBERTa models
 ```
 
 ## 🧠 Supported Models
