@@ -16,7 +16,7 @@ class Config:
         self.exp_name = f'{self.model_name}_{self.data_paradigm}'
         self.primary_dataset_name = 'Circa'
         self.secondary_dataset_name = 'None'
-        self.base_path = '/dt/shabtaia/dt-fujitsu-LLMVisibility/Yarin'
+        self.base_path = ''
         self.exp_path = f'{self.base_path}/{self.primary_dataset_name}/{self.secondary_dataset_name}/{self.exp_name}'
 
         self.llm_flow = 'Fine tuned'
@@ -40,7 +40,7 @@ class Config:
         # Load data and initialize training arguments
         self.load_data()
         self.training_args = TrainingArguments(
-            output_dir="/dt/shabtaia/dt-fujitsu-LLMVisibility/Yarin/results",
+            output_dir="./results",
             per_device_train_batch_size=1,
             per_device_eval_batch_size=1,
             gradient_accumulation_steps=4,
@@ -105,7 +105,7 @@ def load_circa(data_paradigm):
     Returns:
         DatasetDict: Train/validation/test split of the Circa dataset.
     """
-    df = pd.read_csv("/sise/home/yarinye/fujitsu_WP3/CSNLU_Project/circa-data.tsv", sep='\t')
+    df = pd.read_csv("", sep='\t')
 
     # Construct input sentence based on the paradigm
     if data_paradigm == 'Questions and Answers':
