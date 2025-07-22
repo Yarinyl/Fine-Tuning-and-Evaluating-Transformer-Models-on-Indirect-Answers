@@ -48,7 +48,7 @@ The config includes:
 ### For LLaMA 3 (Unsloth)
 
 ```bash
-python train_llm.py
+python train_test_LLM.py
 ```
 
 - Uses LoRA-based fine-tuning.
@@ -58,7 +58,7 @@ python train_llm.py
 ### For BERT/RoBERTa
 
 ```bash
-python train_slm.py
+python train_test_SLM.py
 ```
 
 - Uses Hugging Face `Trainer` for classification fine-tuning.
@@ -66,7 +66,7 @@ python train_slm.py
 
 ## 🧪 Evaluation
 
-Both `train_llm.py` and `train_slm.py` include automatic evaluation on:
+Both `train_test_LLM.py` and `train_test_SLM.py` include automatic evaluation on:
 
 - Circa test set
 - SST2 validation set
@@ -94,9 +94,6 @@ pip install transformers datasets scikit-learn pandas unsloth tqdm
 - Models are saved under `exp_path` based on model name and data paradigm.
 - Evaluation metrics are written to a CSV file with one row per experiment.
 
-## 📜 License
-
-This project is provided for research and educational use only. Please cite relevant model and dataset sources when using this code.
 
 ## 🤝 Acknowledgments
 
