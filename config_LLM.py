@@ -105,7 +105,7 @@ def load_circa(data_paradigm):
     Returns:
         DatasetDict: Train/validation/test split of the Circa dataset.
     """
-    df = pd.read_csv("", sep='\t')
+    df = pd.read_csv("./circa-data.tsv", sep='\t')
 
     # Construct input sentence based on the paradigm
     if data_paradigm == 'Questions and Answers':
