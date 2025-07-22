@@ -24,7 +24,7 @@ class Config:
         self.secondary_dataset_name = 'None'  # Can be another dataset name or 'None'
 
         # Directory paths
-        self.base_path = '/dt/shabtaia/dt-fujitsu-LLMVisibility/Yarin'
+        self.base_path = ''
         self.exp_path = f'{self.base_path}/{self.primary_dataset_name}/{self.secondary_dataset_name}/{self.exp_name}'
 
         # Other settings
@@ -41,7 +41,7 @@ class Config:
 
         # Define Hugging Face training arguments
         self.training_args = TrainingArguments(
-            output_dir="/dt/shabtaia/dt-fujitsu-LLMVisibility/Yarin/results",
+            output_dir="./results",
             eval_strategy="epoch",
             save_strategy="epoch",
             learning_rate=2e-5,
@@ -139,7 +139,7 @@ def load_circa(data_paradigm):
     Returns:
         DatasetDict: Split dataset into train, validation, and test sets.
     """
-    df = pd.read_csv("/sise/home/yarinye/fujitsu_WP3/CSNLU_Project/circa-data.tsv", sep='\t')
+    df = pd.read_csv("./circa-data.tsv", sep='\t')
 
     # Construct input sentence column
     if data_paradigm == 'Questions and Answers':
